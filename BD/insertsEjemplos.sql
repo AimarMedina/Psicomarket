@@ -1,6 +1,5 @@
 USE `psicomarket`;
 
-
 -- ----------------------------
 -- Usuarios
 -- ----------------------------
@@ -36,6 +35,7 @@ INSERT INTO `comercios`
 (8, 'Gasteiz Tattoo Studio', 'Estudio de tatuajes y piercings en el centro', 0, 42.8470, -2.6750, 'uploads/comercios/tattoo.jpg', 3),
 (9, 'Tienda Game Vitoria', 'Videojuegos, consolas y merchandising', 0, 42.8468, -2.6695, 'uploads/comercios/game_vitoria.jpg', 6),
 (10, 'Decathlon Boulevard', 'Deporte, ropa técnica y material para actividades de exterior', 1, 42.8396, -2.6568, 'uploads/comercios/decathlon.jpg', 8);
+
 -- ------------
 -- Categorias
 -- ------------
@@ -91,38 +91,39 @@ INSERT INTO categorias (nombre) VALUES
 ('Regalos y ocasiones especiales'),
 ('Ofertas y liquidaciones');
 
-
 -- ----------------------------
--- Productos
+-- Productos (corregidos)
 -- ----------------------------
 INSERT INTO `productos` (`id`,`Nombre`,`Descripcion`,`Precio`,`id_comercio`,`id_categoria`) VALUES
-(1,'Café Espresso 250g','Café tostado de mezcla selecta - bolsas de 250g',0,1,45),
-(2,'Taza de cerámica','Taza artesanal 300ml',0,1,46),
-(3,'Clean Code (libro)','Manual sobre buenas prácticas de programación',0,2,42),
-(4,'Novela "La tarde"','Novela contemporánea en español',0,2,42),
-(5,'Cambio de cadena','Servicio completo de cambio de cadena',0,3,48),
-(6,'Neumático 26"','Neumático para MTB tamaño 26 pulgadas',0,3,48),
-(7,'Vestido veraniego S','Vestido algodón orgánico talla S',0,4,10),
-(8,'Camiseta básica M','Camiseta 100% algodón talla M',0,4,11),
-(9,'Cargador USB-C','Cargador rápido 30W',0,5,4),
-(10,'Pantalla 24"','Monitor 24 pulgadas FullHD',0,5,5),
-(11,'Cesta frutal mediana','Selección de frutas de temporada',0,6,45),
-(12,'Mermelada casera 300g','Mermelada artesanal de fresa',0,6,45),
-(13,'Anillo de plata','Anillo sencillo en plata 925',0,7,15),
-(14,'Reloj clásico','Reloj analógico con correa de cuero',0,7,15),
-(15,'Cuaderno A4 80 hojas','Cuaderno espiral A4 80 hojas',0,8,38),
-(16,'Bolígrafo gel','Pack 3 bolígrafos de gel',0,8,38),
-(17,'Baguette artesanal','Pan recién horneado 300g',0,9,45),
-(18,'Croissant mantequilla','Croissant tradicional',0,9,45),
+(1,'Café Espresso 250g','Café tostado de mezcla selecta - bolsas de 250g',0,2,45),
+(2,'Taza de cerámica','Taza artesanal 300ml',0,2,46),
+(3,'Clean Code (libro)','Manual sobre buenas prácticas de programación',0,3,42),
+(4,'Novela "La tarde"','Novela contemporánea en español',0,3,42),
+(22,'Libro infantil "Aventuras"','Cuento ilustrado para 4-8 años',0,3,42),
+(5,'Cambio de cadena','Servicio completo de cambio de cadena',0,6,31),
+(6,'Neumático 26"','Neumático para MTB tamaño 26 pulgadas',0,6,33),
+(21,'Guantes ciclismo','Guantes para manos con gel',0,6,31),
+(7,'Vestido veraniego S','Vestido algodón orgánico talla S',0,1,10),
+(8,'Camiseta básica M','Camiseta 100% algodón talla M',0,1,11),
+(23,'Bolso sostenible','Bolso hecho de materiales reciclados',0,1,14),
+(9,'Cargador USB-C','Cargador rápido 30W',0,1,4),
+(10,'Pantalla 24"','Monitor 24 pulgadas FullHD',0,1,5),
+(24,'Cable HDMI 2m','Cable HDMI 2 metros alta velocidad',0,1,4),
+(11,'Cesta frutal mediana','Selección de frutas de temporada',0,5,45),
+(12,'Mermelada casera 300g','Mermelada artesanal de fresa',0,5,45),
+(25,'Pack frutas premium','Caja regalo con frutas seleccionadas',0,5,45),
+(13,'Anillo de plata','Anillo sencillo en plata 925',0,1,15),
+(14,'Reloj clásico','Reloj analógico con correa de cuero',0,1,15),
+(26,'Mantenimiento reloj','Servicio oficial de mantenimiento y pulido',0,1,15),
+(15,'Piercing acero quirúrgico','Piercing de acero quirúrgico hipoalergénico',0,8,15),
+(16,'Aro para nariz','Aro para perforación nasal de titanio',0,8,15),
+(27,'Crema Aftercare 50ml','Crema específica para la curación de tatuajes',0,8,16),
+(28,'Tatuaje pequeño','Sesión de tatuaje de hasta 5cm',0,8,48),
+(29,'Tatuaje mediano','Sesión de tatuaje de hasta 15cm',0,8,48),
+(17,'Baguette artesanal','Pan recién horneado 300g',0,7,45),
+(18,'Croissant mantequilla','Croissant tradicional',0,7,45),
 (19,'Plan de entrenamiento 12 semanas','Programa personalizado de entrenamiento',0,10,31),
-(20,'Proteína whey 1kg','Suplemento proteico sabor vainilla',0,10,21),
-(21,'Guantes ciclismo','Guantes para manos con gel',0,3,31),
-(22,'Libro infantil "Aventuras"','Cuento ilustrado para 4-8 años',0,2,42),
-(23,'Bolso sostenible','Bolso hecho de materiales reciclados',0,4,14),
-(24,'Cable HDMI 2m','Cable HDMI 2 metros alta velocidad',0,5,4),
-(25,'Pack frutas premium','Caja regalo con frutas seleccionadas',0,6,45),
-(26,'Mantenimiento reloj','Servicio oficial de mantenimiento y pulido',0,7,15);
-
+(20,'Proteína whey 1kg','Suplemento proteico sabor vainilla',0,10,21);
 
 -- ----------------------------
 -- Imágenes de productos
@@ -142,18 +143,21 @@ INSERT INTO `imagenes` (`id`,`Ruta_imagen_producto`,`id_producto`) VALUES
 (12,'uploads/productos/mermelada_fresa.jpg',12),
 (13,'uploads/productos/anillo_plata.jpg',13),
 (14,'uploads/productos/reloj_clasico.jpg',14),
-(15,'uploads/productos/cuaderno_a4.jpg',15),
-(16,'uploads/productos/boligrafo_pack.jpg',16),
+(15,'uploads/productos/piercing_acero.jpg',15),
+(16,'uploads/productos/aro_nariz.jpg',16),
 (17,'uploads/productos/baguette.jpg',17),
 (18,'uploads/productos/croissant.jpg',18),
 (19,'uploads/productos/plan_entreno.jpg',19),
 (20,'uploads/productos/whey1kg.jpg',20),
-(21,'uploads/productos/kale.jpg',21),
-(22,'uploads/productos/levadura.jpg',22),
-(23,'uploads/productos/servicio_lavadora.jpg',23),
-(24,'uploads/productos/destornilladores.jpg',24),
-(25,'uploads/productos/guantes_ciclismo.jpg',25);
-
+(21,'uploads/productos/guantes_ciclismo.jpg',21),
+(22,'uploads/productos/libro_infantil.jpg',22),
+(23,'uploads/productos/bolso_sostenible.jpg',23),
+(24,'uploads/productos/cable_hdmi.jpg',24),
+(25,'uploads/productos/pack_frutas.jpg',25),
+(26,'uploads/productos/mantenimiento_reloj.jpg',26),
+(27,'uploads/productos/aftercare.jpg',27),
+(28,'uploads/productos/tatuaje_small.jpg',28),
+(29,'uploads/productos/tatuaje_medium.jpg',29);
 
 -- ----------------------------
 -- Favoritos
@@ -208,25 +212,20 @@ INSERT INTO `valoraciones` (`id`,`estrellas`,`id_usuario`,`id_comercio`) VALUES
 (26,4.8,11,3),
 (27,4.5,7,10);
 
--- ------------
+-- ----------------------------
 -- Chat
--- ------------
-
+-- ----------------------------
 INSERT INTO `chat` (`id`, `comercioID`, `usuarioID`) VALUES
-(1, 4, 1),  -- Ejemplo: chat entre la tienda Moda Clara y la usuaria Ana
-(2, 1, 1);  -- Ejemplo: chat entre La Buena Taza y Ana
+(1, 4, 1),
+(2, 1, 1);
 
--- ------------
+-- ----------------------------
 -- Mensajes
--- ------------
+-- ----------------------------
 INSERT INTO `mensajes` (`id`, `mensaje`, `fecha`, `userID`, `chatID`) VALUES
 (1, '¿Hola teneis disponible el vestido azul en talla M?', '2025-10-17 11:59:00', 1, 1),
 (2, 'Hola', '2025-10-17 12:00:00', 1, 2),
 (3, 'Si, tenemos 10 unidades en stock', '2025-10-17 17:20:00', 6, 1),
 (4, 'Perfecto, reservame uno para el jueves a la tarde. Gracias', '2025-10-18 12:11:00', 1, 1);
 
-
-
 COMMIT;
-
-

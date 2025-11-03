@@ -54,7 +54,7 @@ class ProductoController extends BaseController
             die ('Producto no encontrado');
         }
     }
-    
+
 
     private function contarImagenes($cantidad)
     {
@@ -133,6 +133,10 @@ class ProductoController extends BaseController
             $extension = pathinfo($nombreArchivo, PATHINFO_EXTENSION);
 
             $carpeta = "uploads/productos/";
+
+            if(!is_dir($carpeta)){
+                mkdir($carpeta,777,true);
+            }
 
             $nombreArchivoFinal = uniqid('img_', true) . '.' . $extension;
             $rutaFinal = $carpeta . $nombreArchivoFinal;

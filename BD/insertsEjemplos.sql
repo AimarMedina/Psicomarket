@@ -115,16 +115,12 @@ INSERT INTO `productos` (`id`,`Nombre`,`Descripcion`,`Precio`,`id_comercio`,`id_
 (18,'Croissant mantequilla','Croissant tradicional',0,9,45),
 (19,'Plan de entrenamiento 12 semanas','Programa personalizado de entrenamiento',0,10,31),
 (20,'Proteína whey 1kg','Suplemento proteico sabor vainilla',0,10,21),
-(21,'Kale orgánico 200g','Kale lavado y envasado',0,11,22),
-(22,'Levadura natural 200g','Levadura para panadería casera',0,11,45),
-(23,'Reparación lavadora','Diagnóstico y reparación de lavadora',0,12,26),
-(24,'Juego de destornilladores','Set 6 piezas magnéticas',0,12,30),
-(25,'Guantes ciclismo','Guantes para manos con gel',0,3,31),
-(26,'Libro infantil "Aventuras"','Cuento ilustrado para 4-8 años',0,2,42),
-(27,'Bolso sostenible','Bolso hecho de materiales reciclados',0,4,14),
-(28,'Cable HDMI 2m','Cable HDMI 2 metros alta velocidad',0,5,4),
-(29,'Pack frutas premium','Caja regalo con frutas seleccionadas',0,6,45),
-(30,'Mantenimiento reloj','Servicio oficial de mantenimiento y pulido',0,7,15);
+(21,'Guantes ciclismo','Guantes para manos con gel',0,3,31),
+(22,'Libro infantil "Aventuras"','Cuento ilustrado para 4-8 años',0,2,42),
+(23,'Bolso sostenible','Bolso hecho de materiales reciclados',0,4,14),
+(24,'Cable HDMI 2m','Cable HDMI 2 metros alta velocidad',0,5,4),
+(25,'Pack frutas premium','Caja regalo con frutas seleccionadas',0,6,45),
+(25,'Mantenimiento reloj','Servicio oficial de mantenimiento y pulido',0,7,15);
 
 
 -- ----------------------------
@@ -156,11 +152,6 @@ INSERT INTO `imagenes` (`id`,`Ruta_imagen_producto`,`id_producto`) VALUES
 (23,'uploads/productos/servicio_lavadora.jpg',23),
 (24,'uploads/productos/destornilladores.jpg',24),
 (25,'uploads/productos/guantes_ciclismo.jpg',25),
-(26,'uploads/productos/libro_infantil.jpg',26),
-(27,'uploads/productos/bolso_sostenible.jpg',27),
-(28,'uploads/productos/hdmi_2m.jpg',28),
-(29,'uploads/productos/pack_frutas.jpg',29),
-(30,'uploads/productos/mantenimiento_reloj.jpg',30),
 -- imágenes adicionales para algunos productos (variedad)
 (31,'uploads/productos/cafe_250_side.jpg',1),
 (32,'uploads/productos/taza_ceramica_box.jpg',2),

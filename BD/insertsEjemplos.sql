@@ -1,5 +1,6 @@
 USE `psicomarket`;
 
+
 -- ----------------------------
 -- Usuarios
 -- ----------------------------
@@ -120,7 +121,7 @@ INSERT INTO `productos` (`id`,`Nombre`,`Descripcion`,`Precio`,`id_comercio`,`id_
 (23,'Bolso sostenible','Bolso hecho de materiales reciclados',0,4,14),
 (24,'Cable HDMI 2m','Cable HDMI 2 metros alta velocidad',0,5,4),
 (25,'Pack frutas premium','Caja regalo con frutas seleccionadas',0,6,45),
-(25,'Mantenimiento reloj','Servicio oficial de mantenimiento y pulido',0,7,15);
+(26,'Mantenimiento reloj','Servicio oficial de mantenimiento y pulido',0,7,15);
 
 
 -- ----------------------------
@@ -151,26 +152,7 @@ INSERT INTO `imagenes` (`id`,`Ruta_imagen_producto`,`id_producto`) VALUES
 (22,'uploads/productos/levadura.jpg',22),
 (23,'uploads/productos/servicio_lavadora.jpg',23),
 (24,'uploads/productos/destornilladores.jpg',24),
-(25,'uploads/productos/guantes_ciclismo.jpg',25),
--- imágenes adicionales para algunos productos (variedad)
-(31,'uploads/productos/cafe_250_side.jpg',1),
-(32,'uploads/productos/taza_ceramica_box.jpg',2),
-(33,'uploads/productos/monitor24_box.jpg',10),
-(34,'uploads/productos/whey1kg_close.jpg',20),
-(35,'uploads/productos/anillo_plata_box.jpg',13),
-(36,'uploads/productos/vestido_verano_detail.jpg',7),
-(37,'uploads/productos/camiseta_basica_fold.jpg',8),
-(38,'uploads/productos/bolso_sostenible_detail.jpg',27),
-(39,'uploads/productos/pack_frutas_open.jpg',29),
-(40,'uploads/productos/mermelada_jar.jpg',12),
-(41,'uploads/productos/neumatico26_tread.jpg',6),
-(42,'uploads/productos/guantes_ciclismo_pair.jpg',25),
-(43,'uploads/productos/cargador_30w_box.jpg',9),
-(44,'uploads/productos/cuaderno_a4_cover.jpg',15),
-(45,'uploads/productos/libro_infantil_open.jpg',26),
-(46,'uploads/productos/baguette_close.jpg',17),
-(47,'uploads/productos/reloj_clasico_box.jpg',14),
-(48,'uploads/productos/hdmi_plug.jpg',28);
+(25,'uploads/productos/guantes_ciclismo.jpg',25);
 
 
 -- ----------------------------
@@ -183,20 +165,16 @@ INSERT INTO `favoritos` (`id`,`Fecha`,`id_producto`,`id_usuario`) VALUES
 (4,'2025-09-04',20,7),
 (5,'2025-09-05',9,9),
 (6,'2025-09-06',2,11),
-(7,'2025-09-06',27,1),
-(8,'2025-09-07',29,5),
-(9,'2025-09-08',15,7),
-(10,'2025-09-09',25,1),
-(11,'2025-09-10',6,9),
-(12,'2025-09-11',13,11),
-(13,'2025-09-12',19,1),
-(14,'2025-09-13',4,5),
-(15,'2025-09-14',10,7),
-(16,'2025-09-15',22,9),
-(17,'2025-09-16',30,11),
-(18,'2025-09-17',8,1),
-(19,'2025-09-18',28,5),
-(20,'2025-09-19',17,7);
+(7,'2025-09-08',15,7),
+(8,'2025-09-09',25,1),
+(9,'2025-09-10',6,9),
+(10,'2025-09-11',13,11),
+(11,'2025-09-12',19,1),
+(12,'2025-09-13',4,5),
+(13,'2025-09-14',10,7),
+(14,'2025-09-15',22,9),
+(15,'2025-09-17',8,1),
+(16,'2025-09-19',17,7);
 
 -- ----------------------------
 -- Valoraciones
@@ -219,19 +197,16 @@ INSERT INTO `valoraciones` (`id`,`estrellas`,`id_usuario`,`id_comercio`) VALUES
 (15,5.0,1,7),
 (16,4.0,9,10),
 (17,4.5,11,10),
-(18,3.8,5,12),
-(19,4.0,7,11),
-(20,4.2,1,4),
-(21,4.7,9,3),
-(22,4.9,5,7),
-(23,3.7,11,5),
-(24,4.4,1,8),
-(25,4.6,7,6),
-(26,4.1,9,2),
-(27,4.0,5,1),
-(28,4.8,11,3),
-(29,4.3,1,12),
-(30,4.5,7,10);
+(18,4.2,1,4),
+(19,4.7,9,3),
+(20,4.9,5,7),
+(21,3.7,11,5),
+(22,4.4,1,8),
+(23,4.6,7,6),
+(24,4.1,9,2),
+(25,4.0,5,1),
+(26,4.8,11,3),
+(27,4.5,7,10);
 
 -- ------------
 -- Chat

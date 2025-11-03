@@ -1,3 +1,6 @@
+
+DROP DATABASE IF EXISTS psicomarket;
+
 CREATE DATABASE IF NOT EXISTS psicomarket;
 USE psicomarket;
 
